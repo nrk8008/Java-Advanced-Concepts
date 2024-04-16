@@ -1,6 +1,8 @@
 package com.ecommarce.productservice.controllers;
 
+import com.ecommarce.productservice.dtos.GetProductDto;
 import com.ecommarce.productservice.models.Product;
+import com.ecommarce.productservice.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -8,10 +10,14 @@ import org.springframework.web.bind.annotation.*;
 
 public class Productcontroller {
 
-    @GetMapping( "/{id}/{temp}")
-
-    public String getProductById(@PathVariable("id") Long id, @PathVariable("temp") String temp){
-        return "Here's is your product " + id + " "+temp;
+    private ProductService productService;
+    public Productcontroller(ProductService productService) {
+        this.productService = productService;
+    }
+    @GetMapping( "/{id}")
+    public @ResponseBody GetProductDto  getProductById(
+            @PathVariable("id") Long id){
+        return productService.getProductById(id);
     }
 
     @PostMapping("")
