@@ -23,7 +23,7 @@ public class Productcontroller {
     @PostMapping("")
     public String createProduct(@RequestBody Product product){
         System.out.println(product.getCategory());
-        System.out.println(product.getName());
+        System.out.println(product.getTitle());
         System.out.println(product.getPrice());
         return "Product created." ;
     }

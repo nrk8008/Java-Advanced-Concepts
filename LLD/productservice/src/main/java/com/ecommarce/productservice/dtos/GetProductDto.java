@@ -7,9 +7,9 @@ import lombok.Setter;
 @Setter
 
 public class GetProductDto {
-    private String name;
+    private String Title;
 
     private Double price;
 
-    private String imageUrl;
+    private String image;
 }
