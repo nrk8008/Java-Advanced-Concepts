@@ -1,5 +1,4 @@
 package com.ecommarce.productservice.controllers;
-
 import com.ecommarce.productservice.dtos.GetProductDto;
 import com.ecommarce.productservice.models.Product;
 import com.ecommarce.productservice.service.ProductService;
