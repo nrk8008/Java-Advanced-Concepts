@@ -1,8 +1,5 @@
 package com.ecommarce.productservice.models;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import static java.awt.font.TransformAttribute.IDENTITY;
@@ -13,7 +10,8 @@ import static java.awt.font.TransformAttribute.IDENTITY;
 @Entity(name = "ecomm_user")
 public final class User {
     @Id
-   //@GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private String name;
    // @Column(name = "email", unique = true)

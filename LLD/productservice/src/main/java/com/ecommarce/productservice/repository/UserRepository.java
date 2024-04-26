@@ -12,7 +12,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByName(String name);
 
-    List<User> findByNameEndingWith(String suffix);
+    List<User> findAllByNameEndingWith(String suffix);
 
     @Override
     User save(User entity);
