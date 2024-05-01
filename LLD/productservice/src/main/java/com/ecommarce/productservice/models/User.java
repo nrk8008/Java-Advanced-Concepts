@@ -11,9 +11,8 @@ import static java.awt.font.TransformAttribute.IDENTITY;
 public final class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
     private String name;
-   // @Column(name = "email", unique = true)
+   @Column(name = "email", unique = true)
     private String email;
 }

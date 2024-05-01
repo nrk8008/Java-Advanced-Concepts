@@ -8,6 +8,5 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class NotFoundException extends Exception {
     public NotFoundException() {
         super("The product ID was not found.");
-
     }
 }
