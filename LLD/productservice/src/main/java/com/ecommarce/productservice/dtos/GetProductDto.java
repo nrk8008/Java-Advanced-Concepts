@@ -8,8 +8,6 @@ import lombok.Setter;
 
 public class GetProductDto {
     private String Title;
-
     private Double price;
-
     private String image;
 }

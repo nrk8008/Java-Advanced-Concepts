@@ -1,10 +1,12 @@
 package com.ecommarce.productservice.models;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@Data
 public class Product {
 
     private Long id;
