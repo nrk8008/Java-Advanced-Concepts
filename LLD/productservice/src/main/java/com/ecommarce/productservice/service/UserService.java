@@ -13,16 +13,18 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-
-
     public User createUser(String name, String email) {
 
         User user = new User();
         user.setName(name);
         user.setEmail(email);
-
         userRepository.save(user);
         return user;
+
+    }
+
+    public User getUserByName(String name) {
+        return userRepository.findByName(name).get();
 
     }
 }
